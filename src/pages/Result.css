@@ -1,0 +1,304 @@
+.result-page {
+  padding: 2.5rem;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.result-hero-banner {
+  padding: 2.5rem;
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.banner-master {
+  background: linear-gradient(135deg, rgba(21, 35, 23, 0.95), rgba(13, 20, 15, 0.98));
+  border: 1px solid rgba(139, 195, 74, 0.4);
+  box-shadow: 0 0 30px rgba(139, 195, 74, 0.15);
+}
+
+.banner-partial {
+  background: linear-gradient(135deg, rgba(35, 30, 20, 0.95), rgba(20, 17, 12, 0.98));
+  border: 1px solid rgba(212, 163, 115, 0.4);
+  box-shadow: 0 0 30px rgba(212, 163, 115, 0.15);
+}
+
+.banner-incorrect {
+  background: linear-gradient(135deg, rgba(35, 18, 18, 0.95), rgba(20, 12, 12, 0.98));
+  border: 1px solid rgba(224, 82, 82, 0.4);
+  box-shadow: 0 0 30px rgba(224, 82, 82, 0.15);
+}
+
+.hero-status-strip {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.outcome-stamp {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+}
+
+.banner-master .outcome-stamp {
+  background: rgba(139, 195, 74, 0.2);
+  color: #a7e06a;
+  border: 1px solid #8bc34a;
+}
+
+.banner-partial .outcome-stamp {
+  background: rgba(212, 163, 115, 0.2);
+  color: var(--color-accent-gold);
+  border: 1px solid var(--color-accent-amber);
+}
+
+.banner-incorrect .outcome-stamp {
+  background: rgba(224, 82, 82, 0.2);
+  color: #ff8585;
+  border: 1px solid #e05252;
+}
+
+.case-ref {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+}
+
+.hero-verdict-title {
+  font-size: 1.8rem;
+  color: var(--color-text-main);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+}
+
+.hero-verdict-sub {
+  font-size: 1.05rem;
+  color: var(--color-text-main);
+  opacity: 0.9;
+  line-height: 1.5;
+}
+
+/* Score Grid */
+.result-score-grid {
+  margin-bottom: 2rem;
+}
+
+.score-summary-card {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1.5rem 2rem;
+}
+
+.score-badge-box {
+  display: flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  padding-right: 2.5rem;
+}
+
+.score-number {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-accent-gold);
+  line-height: 1;
+}
+
+.score-max {
+  font-size: 1.2rem;
+  color: var(--color-text-muted);
+}
+
+.score-rank-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.rank-label {
+  font-size: 0.7rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+}
+
+.rank-title {
+  font-size: 1.5rem;
+  color: var(--color-accent-amber);
+  letter-spacing: 0.05em;
+}
+
+.rank-desc {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* Details Columns */
+.result-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.deduction-recap-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.recap-label {
+  font-size: 0.72rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.recap-value {
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  font-weight: 500;
+}
+
+.text-correct {
+  color: #8bc34a;
+}
+
+.text-incorrect {
+  color: #e05252;
+}
+
+.text-neutral {
+  color: var(--color-accent-amber);
+}
+
+.recap-outcome-explanation {
+  margin-top: 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 1.25rem;
+  border-left: 3px solid var(--color-accent-amber);
+  border-radius: 2px;
+}
+
+.explanation-title {
+  font-size: 0.85rem;
+  color: var(--color-accent-gold);
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.explanation-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+}
+
+/* Canonical Card */
+.canon-perpetrator-box {
+  background: rgba(139, 0, 0, 0.15);
+  border: 1px solid rgba(224, 82, 82, 0.3);
+  padding: 1rem 1.25rem;
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+}
+
+.canon-label {
+  font-size: 0.7rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.15em;
+  color: #ff8585;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.canon-culprit {
+  font-size: 1.3rem;
+  color: #fff;
+  letter-spacing: 0.05em;
+}
+
+.canon-role {
+  font-size: 0.8rem;
+  color: var(--color-accent-amber);
+}
+
+.canon-summary-section {
+  margin-bottom: 1.25rem;
+}
+
+.canon-section-heading {
+  font-size: 0.8rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  color: var(--color-accent-gold);
+  margin-bottom: 0.4rem;
+}
+
+.canon-text {
+  font-size: 0.88rem;
+  color: var(--color-text-main);
+  line-height: 1.5;
+}
+
+.canon-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.canon-bullets li {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: var(--color-text-main);
+  padding-left: 1rem;
+  position: relative;
+}
+
+.canon-bullets li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--color-accent-amber);
+}
+
+/* Actions Bar */
+.result-actions-bar {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+.btn-action-large {
+  font-size: 0.95rem;
+  letter-spacing: 0.1em;
+  padding: 0.85rem 1.75rem;
+}
+
+@media (max-width: 1024px) {
+  .result-details-grid {
+    grid-template-columns: 1fr;
+  }
+  .score-summary-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .score-badge-box {
+    border-right: none;
+    padding-right: 0;
+  }
+}
+

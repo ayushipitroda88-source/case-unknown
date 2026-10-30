@@ -1,0 +1,242 @@
+.notes-page {
+  padding: 2.5rem;
+  max-width: 1550px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Category Filter Bar */
+.notes-filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--color-bg-surface);
+  border: var(--border-thin);
+  padding: 0.75rem 1.25rem;
+  border-radius: 2px;
+  flex-wrap: wrap;
+}
+
+.category-chips {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.notes-content-area {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 2rem;
+  flex: 1;
+}
+
+.notes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  overflow-y: auto;
+  padding-right: 0.5rem;
+}
+
+.note-card {
+  background: var(--color-bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--color-accent-amber);
+  border-radius: 2px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: var(--transition-smooth);
+}
+
+.note-card:hover {
+  border-color: rgba(212, 163, 115, 0.4);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.note-card.editing-highlight {
+  border-color: var(--color-accent-gold);
+  background: rgba(212, 163, 115, 0.05);
+}
+
+.note-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.note-category {
+  font-size: 0.68rem;
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-amber);
+  background: rgba(212, 163, 115, 0.1);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+}
+
+.note-timestamp {
+  font-size: 0.75rem;
+  color: var(--color-text-muted);
+  font-family: monospace;
+}
+
+.note-title {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--color-text-main);
+  letter-spacing: 0.05em;
+}
+
+.note-body {
+  font-size: 0.92rem;
+  color: #b0b0b5;
+  line-height: 1.6;
+}
+
+.note-card-actions {
+  display: flex;
+  gap: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.note-action-btn {
+  background: none;
+  border: none;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  font-family: var(--font-heading);
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  transition: var(--transition-smooth);
+  letter-spacing: 0.05em;
+}
+
+.note-action-btn:hover {
+  color: var(--color-text-main);
+}
+
+.note-action-btn.delete-btn:hover {
+  color: #ff6b6b;
+}
+
+.empty-notes-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 1rem;
+  text-align: center;
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  gap: 0.5rem;
+}
+
+.empty-notes-view .empty-icon {
+  font-size: 2.2rem;
+  opacity: 0.4;
+}
+
+.empty-notes-view .empty-text {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+}
+
+.empty-notes-view .empty-sub {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  max-width: 400px;
+  line-height: 1.4;
+}
+
+/* Note Creation Form */
+.note-form-card {
+  position: sticky;
+  top: 1.5rem;
+}
+
+.new-note-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-label {
+  font-size: 0.72rem;
+  font-family: var(--font-heading);
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.form-input, .form-textarea, .form-select {
+  background: var(--color-bg-surface-light);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--color-text-main);
+  padding: 0.75rem;
+  border-radius: 2px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  outline: none;
+  transition: var(--transition-smooth);
+}
+
+.form-input:focus, .form-textarea:focus, .form-select:focus {
+  border-color: var(--color-accent-amber);
+  box-shadow: 0 0 8px rgba(212, 163, 115, 0.2);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 110px;
+  line-height: 1.45;
+}
+
+.form-action-row {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.notes-journal-tip {
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-left: 2px solid var(--color-accent-amber);
+  padding: 1rem;
+  border-radius: 2px;
+}
+
+.tip-title {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-amber);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.notes-journal-tip p {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+@media (max-width: 1100px) {
+  .notes-content-area {
+    grid-template-columns: 1fr;
+  }
+}

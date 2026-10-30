@@ -1,0 +1,315 @@
+.suspects-page {
+  padding: 2.5rem;
+  max-width: 1550px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fadeIn 0.4s ease-out;
+}
+
+.suspect-disclaimer-strip {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(212, 163, 115, 0.08);
+  border-left: 3px solid var(--color-accent-amber);
+  padding: 0.75rem 1.25rem;
+  font-size: 0.82rem;
+  color: var(--color-accent-gold);
+  border-radius: 2px;
+}
+
+.strip-icon {
+  font-size: 1.1rem;
+}
+
+.suspects-content-area {
+  display: grid;
+  grid-template-columns: 1fr 450px;
+  gap: 2rem;
+  flex: 1;
+}
+
+.suspects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+  align-content: flex-start;
+}
+
+.suspect-card {
+  background: var(--color-bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2px;
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.suspect-card:hover {
+  border-color: rgba(212, 163, 115, 0.4);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow);
+}
+
+.suspect-card.selected {
+  border-color: var(--color-accent-amber);
+  background: rgba(212, 163, 115, 0.06);
+  box-shadow: 0 0 15px rgba(212, 163, 115, 0.2);
+}
+
+.suspect-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.suspect-id {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--color-accent-amber);
+  letter-spacing: 0.1em;
+}
+
+.suspect-status-tag {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  font-family: var(--font-heading);
+}
+
+.status-questioned {
+  color: #8bc34a;
+  background: rgba(139, 195, 74, 0.1);
+  border: 1px solid rgba(139, 195, 74, 0.3);
+}
+
+.status-unquestioned {
+  color: var(--color-accent-amber);
+  background: rgba(212, 163, 115, 0.1);
+  border: 1px solid rgba(212, 163, 115, 0.3);
+}
+
+.suspect-avatar-placeholder {
+  height: 120px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.avatar-silhouette {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--color-accent-gold);
+}
+
+.suspect-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.suspect-card-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  color: var(--color-text-main);
+  letter-spacing: 0.05em;
+}
+
+.suspect-card-role {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* Detail Panel */
+.suspect-detail-panel {
+  display: flex;
+  flex-direction: column;
+}
+
+.suspect-detail-card {
+  animation: slideInRight 0.3s ease-out;
+}
+
+.suspect-detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.suspect-detail-name {
+  font-size: 1.7rem;
+  color: var(--color-text-main);
+  letter-spacing: 0.05em;
+  margin-bottom: 0.2rem;
+}
+
+.suspect-detail-role {
+  font-size: 0.9rem;
+  color: var(--color-accent-amber);
+  margin-bottom: 1.25rem;
+}
+
+.suspect-profile-visual {
+  height: 120px;
+  background: var(--color-bg-surface-light);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.profile-initials {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(212, 163, 115, 0.15);
+  border: 1px solid var(--color-accent-amber);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--color-accent-gold);
+}
+
+.profile-classified {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+}
+
+.suspect-dossier-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.dossier-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0.65rem 0.85rem;
+  border-left: 2px solid var(--color-accent-amber);
+}
+
+.dossier-label {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+}
+
+.dossier-value {
+  color: var(--color-text-main);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
+.highlight-notes {
+  color: var(--color-accent-gold);
+}
+
+/* Related Evidence Chips */
+.related-evidence-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.related-chips-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.related-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.5rem 0.75rem;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 0.82rem;
+  transition: var(--transition-smooth);
+}
+
+.related-chip:hover {
+  border-color: var(--color-accent-amber);
+  background: rgba(212, 163, 115, 0.05);
+}
+
+.chip-name {
+  color: var(--color-text-main);
+  flex: 1;
+}
+
+.chip-status {
+  font-size: 0.7rem;
+  color: var(--color-text-muted);
+}
+
+.related-chip.discovered .chip-icon {
+  color: #8bc34a;
+}
+
+.related-chip.undiscovered .chip-icon {
+  color: var(--color-accent-amber);
+}
+
+.no-related-evidence {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+}
+
+.suspect-actions {
+  display: flex;
+  gap: 0.75rem;
+  flex-direction: column;
+}
+
+.suspect-actions button {
+  width: 100%;
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@media (max-width: 1100px) {
+  .suspects-content-area {
+    grid-template-columns: 1fr;
+  }
+}

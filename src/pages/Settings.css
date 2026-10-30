@@ -1,0 +1,159 @@
+.settings-page {
+  padding: 2.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.settings-layout {
+  margin-top: 1.5rem;
+}
+
+.settings-main-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.settings-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.settings-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.settings-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.settings-row:first-child {
+  padding-top: 0;
+}
+
+.setting-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  max-width: 650px;
+}
+
+.setting-label {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  letter-spacing: 0.05em;
+}
+
+.setting-desc {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.text-danger {
+  color: #ff6b6b;
+}
+
+.storage-status-tag {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: #8bc34a;
+  background: rgba(139, 195, 74, 0.1);
+  padding: 0.3rem 0.65rem;
+  border: 1px solid rgba(139, 195, 74, 0.3);
+  border-radius: 2px;
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--color-text-muted);
+  padding: 0.4rem 0.85rem;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  transition: var(--transition-smooth);
+}
+
+.toggle-switch.active {
+  background: rgba(212, 163, 115, 0.2);
+  border-color: var(--color-accent-amber);
+  color: var(--color-accent-gold);
+}
+
+.toggle-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--color-text-muted);
+  transition: var(--transition-smooth);
+}
+
+.toggle-switch.active .toggle-thumb {
+  background: var(--color-accent-gold);
+  box-shadow: 0 0 6px var(--color-accent-gold);
+}
+
+/* Segmented Control */
+.segmented-control {
+  display: flex;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.segment-btn {
+  background: transparent;
+  border: none;
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  padding: 0.5rem 0.9rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.segment-btn.active {
+  background: var(--color-accent-amber);
+  color: var(--color-bg-main);
+  font-weight: 700;
+}
+
+.danger-row {
+  background: rgba(139, 0, 0, 0.05);
+  padding: 1.25rem;
+  border: 1px solid rgba(224, 82, 82, 0.2);
+  border-radius: 2px;
+  margin-top: 0.5rem;
+}
+
+.settings-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .settings-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}
+

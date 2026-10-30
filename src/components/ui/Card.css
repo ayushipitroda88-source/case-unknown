@@ -1,0 +1,88 @@
+.investigation-card {
+  background-color: var(--color-bg-surface);
+  border: var(--border-thin);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transition-smooth);
+}
+
+/* Subtle corner accents */
+.investigation-card::before,
+.investigation-card::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--color-text-muted);
+  opacity: 0.3;
+  transition: var(--transition-smooth);
+}
+
+.investigation-card::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.investigation-card::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.investigation-card:hover {
+  border-color: rgba(212, 163, 115, 0.2);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+.investigation-card:hover::before,
+.investigation-card:hover::after {
+  border-color: var(--color-accent-amber);
+  opacity: 0.8;
+}
+
+.card-title {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  letter-spacing: 0.15em;
+  color: var(--color-accent-amber);
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-title::before {
+  content: '';
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: var(--color-accent-amber);
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Variants */
+.investigation-card.variant-highlight {
+  background: linear-gradient(145deg, var(--color-bg-surface-light), var(--color-bg-surface));
+  border-color: rgba(212, 163, 115, 0.3);
+}
+
+.investigation-card.variant-highlight::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-accent-amber), transparent);
+  border: none;
+}

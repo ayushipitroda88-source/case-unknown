@@ -1,0 +1,509 @@
+.interrogation-page {
+  padding: 2.5rem;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.interrogation-stat-badge {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  letter-spacing: 0.1em;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.5rem 1rem;
+  border: var(--border-thin);
+  border-radius: 2px;
+}
+
+.interrogation-stat-badge .count-number {
+  color: var(--color-accent-amber);
+  font-weight: 700;
+  margin-right: 0.35rem;
+}
+
+.interrogation-toast {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(212, 163, 115, 0.12);
+  border-left: 4px solid var(--color-accent-amber);
+  border-top: var(--border-thin);
+  border-right: var(--border-thin);
+  border-bottom: var(--border-thin);
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.toast-glow-icon {
+  font-size: 1.5rem;
+}
+
+.toast-lead-text strong {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-gold);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.toast-lead-text p {
+  font-size: 0.9rem;
+  color: var(--color-text-main);
+  line-height: 1.4;
+}
+
+.interrogation-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+/* Left Suspect Selector */
+.suspect-selector-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.selector-title-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding-bottom: 0.5rem;
+}
+
+.selector-count {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.1rem 0.5rem;
+  border-radius: 2px;
+  color: var(--color-accent-amber);
+}
+
+.suspect-pills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.suspect-interrogate-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--color-bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.suspect-interrogate-card:hover {
+  border-color: rgba(212, 163, 115, 0.4);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.suspect-interrogate-card.active {
+  border-color: var(--color-accent-amber);
+  background: rgba(212, 163, 115, 0.08);
+  box-shadow: 0 0 12px rgba(212, 163, 115, 0.1);
+}
+
+.suspect-card-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 2px;
+  background: #1e2026;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-accent-amber);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.suspect-card-meta {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.suspect-meta-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.suspect-card-name {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  letter-spacing: 0.05em;
+}
+
+.suspect-role-chip {
+  font-size: 0.68rem;
+  color: var(--color-accent-amber);
+  letter-spacing: 0.05em;
+}
+
+.suspect-questions-meter {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.status-indicator.active {
+  color: #8bc34a;
+}
+
+.status-indicator.pending {
+  color: var(--color-text-muted);
+}
+
+.selected-dossier-card {
+  margin-top: 0.5rem;
+}
+
+.dossier-mini-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.mini-label {
+  font-size: 0.68rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.mini-val {
+  font-size: 0.85rem;
+  color: var(--color-text-main);
+  line-height: 1.4;
+}
+
+.view-full-dossier-btn {
+  background: none;
+  border: none;
+  color: var(--color-accent-amber);
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  padding: 0.5rem 0 0;
+  text-align: left;
+  transition: var(--transition-smooth);
+}
+
+.view-full-dossier-btn:hover {
+  color: var(--color-accent-gold);
+  text-decoration: underline;
+}
+
+/* Right Column: Interrogation Center */
+.interrogation-dialogue-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.interrogate-banner {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  background: var(--color-bg-surface);
+  border: var(--border-thin);
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid var(--color-accent-amber);
+}
+
+.interrogate-portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.portrait-letters {
+  width: 56px;
+  height: 56px;
+  background: #17181c;
+  border: 1px solid rgba(212, 163, 115, 0.4);
+  color: var(--color-accent-gold);
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+}
+
+.status-live-tag {
+  font-size: 0.6rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  color: #ff6b6b;
+  text-align: center;
+}
+
+.interrogate-info {
+  flex: 1;
+}
+
+.interrogate-name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.35rem;
+}
+
+.interrogate-name {
+  font-size: 1.4rem;
+  color: var(--color-text-main);
+  letter-spacing: 0.05em;
+}
+
+.interrogate-id {
+  font-size: 0.8rem;
+  color: var(--color-accent-amber);
+  font-family: monospace;
+}
+
+.interrogate-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* Transcript Box */
+.transcript-box {
+  min-height: 250px;
+}
+
+.dialogue-exchange {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.exchange-bubble {
+  padding: 1rem 1.25rem;
+  border-radius: 2px;
+  position: relative;
+}
+
+.detective-bubble {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-left: 3px solid var(--color-text-muted);
+}
+
+.suspect-bubble {
+  background: rgba(212, 163, 115, 0.05);
+  border: 1px solid rgba(212, 163, 115, 0.15);
+  border-left: 3px solid var(--color-accent-amber);
+}
+
+.bubble-speaker {
+  margin-bottom: 0.5rem;
+}
+
+.speaker-tag {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+}
+
+.speaker-tag.suspect-tag {
+  color: var(--color-accent-gold);
+}
+
+.bubble-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+}
+
+.exchange-lead-box {
+  background: rgba(139, 0, 0, 0.15);
+  border: 1px solid rgba(224, 82, 82, 0.4);
+  padding: 1rem;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.lead-tag {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  color: #ff8585;
+  font-weight: 700;
+}
+
+.lead-text {
+  font-size: 0.95rem;
+  color: #fce8e8;
+  line-height: 1.4;
+}
+
+.lead-note-sync {
+  font-size: 0.72rem;
+  color: #8bc34a;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+.dialogue-placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+.placeholder-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  opacity: 0.4;
+}
+
+.placeholder-primary {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+  letter-spacing: 0.08em;
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-sub {
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+}
+
+/* Questions Grid */
+.questions-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.questions-header {
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  color: var(--color-accent-amber);
+}
+
+.questions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+.question-item {
+  background: var(--color-bg-surface);
+  border: var(--border-thin);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.75rem;
+  transition: var(--transition-smooth);
+}
+
+.question-item.question-available:hover {
+  border-color: var(--color-accent-amber);
+}
+
+.question-item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.q-number {
+  font-size: 0.7rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.q-status-badge {
+  font-size: 0.65rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  padding: 0.15rem 0.4rem;
+  border-radius: 2px;
+}
+
+.badge-asked {
+  color: #8bc34a;
+  background: rgba(139, 195, 74, 0.1);
+  border: 1px solid rgba(139, 195, 74, 0.3);
+}
+
+.badge-new {
+  color: var(--color-accent-amber);
+  background: rgba(212, 163, 115, 0.1);
+  border: 1px solid rgba(212, 163, 115, 0.25);
+}
+
+.q-prompt {
+  font-size: 0.9rem;
+  color: var(--color-text-main);
+  line-height: 1.4;
+  font-style: italic;
+}
+
+.btn-ask-question {
+  background: rgba(212, 163, 115, 0.1);
+  border: 1px solid var(--color-accent-amber);
+  color: var(--color-accent-gold);
+  font-family: var(--font-heading);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  padding: 0.6rem 0.85rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: var(--transition-smooth);
+}
+
+.btn-ask-question:hover {
+  background: var(--color-accent-amber);
+  color: var(--color-bg-main);
+}
+
+.question-asked .btn-ask-question {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-text-muted);
+}
+
+.question-asked .btn-ask-question:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--color-text-main);
+}
+
+@media (max-width: 1024px) {
+  .interrogation-layout {
+    grid-template-columns: 1fr;
+  }
+}
+

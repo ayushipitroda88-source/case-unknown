@@ -1,0 +1,372 @@
+.deduction-page {
+  padding: 2.5rem;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.readiness-meter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  color: var(--color-accent-amber);
+  background: rgba(212, 163, 115, 0.1);
+  border: var(--border-thin);
+  padding: 0.4rem 0.85rem;
+  border-radius: 2px;
+}
+
+.meter-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--color-accent-gold);
+  border-radius: 50%;
+  box-shadow: 0 0 6px var(--color-accent-gold);
+}
+
+.deduction-audit-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--color-bg-surface);
+  border: var(--border-thin);
+  padding: 1.25rem;
+  border-radius: 2px;
+  margin: 1.5rem 0;
+}
+
+.audit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.audit-val {
+  font-family: var(--font-heading);
+  font-size: 1.3rem;
+  color: var(--color-accent-gold);
+  font-weight: 700;
+}
+
+.audit-label {
+  font-size: 0.72rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.1em;
+  color: var(--color-text-muted);
+}
+
+.audit-divider {
+  width: 1px;
+  height: 35px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.deduction-caution-box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(139, 0, 0, 0.15);
+  border: 1px solid rgba(224, 82, 82, 0.35);
+  padding: 1rem 1.5rem;
+  border-radius: 2px;
+  margin-bottom: 2rem;
+  color: #ffcccc;
+  font-size: 0.88rem;
+  line-height: 1.4;
+}
+
+.caution-icon {
+  font-size: 1.5rem;
+}
+
+.deduction-steps-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.step-prompt {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+}
+
+/* Suspect Choice Cards */
+.suspect-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.25rem;
+}
+
+.suspect-choice-card {
+  background: var(--color-bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.suspect-choice-card:hover {
+  border-color: rgba(212, 163, 115, 0.4);
+}
+
+.suspect-choice-card.selected {
+  border-color: #e05252;
+  background: rgba(139, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(224, 82, 82, 0.2);
+}
+
+.suspect-choice-top {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.choice-avatar {
+  width: 44px;
+  height: 44px;
+  background: #191b21;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-accent-amber);
+}
+
+.choice-name {
+  font-size: 1rem;
+  color: var(--color-text-main);
+}
+
+.choice-role {
+  font-size: 0.72rem;
+  color: var(--color-accent-amber);
+}
+
+.choice-alibi {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+.choice-status-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.status-tag {
+  font-size: 0.68rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  padding: 0.15rem 0.5rem;
+  border-radius: 2px;
+}
+
+.tag-done {
+  color: #8bc34a;
+  background: rgba(139, 195, 74, 0.1);
+}
+
+.tag-pending {
+  color: var(--color-text-muted);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* Evidence Choice Cards */
+.evidence-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.evidence-choice-card {
+  background: var(--color-bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.evidence-choice-card:hover {
+  border-color: rgba(212, 163, 115, 0.4);
+}
+
+.evidence-choice-card.selected {
+  border-color: #e05252;
+  background: rgba(139, 0, 0, 0.1);
+  box-shadow: 0 0 15px rgba(224, 82, 82, 0.2);
+}
+
+.evidence-choice-card.not-discovered {
+  opacity: 0.4;
+  cursor: not-allowed;
+  border-style: dashed;
+}
+
+.choice-ev-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.72rem;
+  color: var(--color-text-muted);
+}
+
+.ev-id {
+  font-family: monospace;
+  color: var(--color-accent-amber);
+}
+
+.ev-name {
+  font-size: 1rem;
+  color: var(--color-text-main);
+}
+
+.ev-desc {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  line-height: 1.35;
+}
+
+.ev-status-line {
+  margin-top: 0.5rem;
+}
+
+.ev-analysis-chip {
+  font-size: 0.65rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.08em;
+  color: var(--color-accent-amber);
+}
+
+/* Methods List */
+.methods-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.method-radio-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background: var(--color-bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1.25rem;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: var(--transition-smooth);
+}
+
+.method-radio-card input {
+  margin-top: 0.3rem;
+  accent-color: #e05252;
+}
+
+.method-radio-card:hover {
+  border-color: rgba(212, 163, 115, 0.3);
+}
+
+.method-radio-card.selected {
+  border-color: #e05252;
+  background: rgba(139, 0, 0, 0.08);
+}
+
+.method-label {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.method-text {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  line-height: 1.4;
+}
+
+/* Final Submission Box */
+.submission-card-box {
+  background: var(--color-bg-surface);
+  border: 1px solid rgba(224, 82, 82, 0.4);
+  padding: 2rem;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.summary-banner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 1rem;
+}
+
+.summary-title {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  letter-spacing: 0.15em;
+  color: #ff6b6b;
+  font-weight: 700;
+}
+
+.summary-line {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.92rem;
+  color: var(--color-text-muted);
+}
+
+.summary-line strong {
+  color: var(--color-text-main);
+}
+
+.submit-btn-wrap {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-submit-deduction {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+}
+
+.confirm-modal-inline {
+  background: rgba(139, 0, 0, 0.2);
+  border: 1px solid rgba(224, 82, 82, 0.4);
+  padding: 1.5rem;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.confirm-btn-row {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .deduction-audit-bar {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .audit-divider {
+    display: none;
+  }
+}
+

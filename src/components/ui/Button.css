@@ -1,0 +1,66 @@
+.investigation-btn {
+  background: transparent;
+  border: 1px solid rgba(212, 163, 115, 0.3);
+  color: var(--color-text-main);
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  padding: 12px 32px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 250px;
+}
+
+.investigation-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 163, 115, 0.1),
+    transparent
+  );
+  transition: 0.5s;
+}
+
+.investigation-btn:hover {
+  border-color: var(--color-accent-amber);
+  color: var(--color-accent-gold);
+  text-shadow: 0 0 8px rgba(212, 163, 115, 0.4);
+  box-shadow: 0 0 15px rgba(212, 163, 115, 0.1) inset;
+}
+
+.investigation-btn:hover::before {
+  left: 100%;
+}
+
+.investigation-btn:active {
+  transform: scale(0.98);
+}
+
+.btn-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Variant styles can be added here, e.g. for a danger button */
+.investigation-btn.danger {
+  border-color: rgba(139, 0, 0, 0.3);
+}
+
+.investigation-btn.danger:hover {
+  border-color: var(--color-accent-red);
+  color: #ff6b6b;
+  text-shadow: 0 0 8px rgba(139, 0, 0, 0.4);
+  box-shadow: 0 0 15px rgba(139, 0, 0, 0.2) inset;
+}
